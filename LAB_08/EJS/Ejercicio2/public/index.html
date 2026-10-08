@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inventario Tecnológico | Ejercicio 02</title>
+
+    <link rel="stylesheet" href="/public/styles.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class="encabezado-contenido">
+            <div class="marca">
+                <span class="marca-icono">IT</span>
+                <div>
+                    <h1>Inventario Tecnológico</h1>
+                    <p>Servidor Híbrido HTTP Nativo</p>
+                </div>
+            </div>
+
+            <span class="etiqueta">Python · HTTP Server</span>
+        </div>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="presentacion">
+            <span class="seccion-etiqueta">SISTEMA DE INVENTARIO</span>
+
+            <h2>Gestión y búsqueda de artículos</h2>
+
+            <p>
+                Consulta el inventario de productos tecnológicos
+                mediante una API REST desarrollada con Python puro.
+                Utiliza los filtros y la paginación para explorar
+                los registros disponibles.
+            </p>
+        </section>
+
+        <section class="estadisticas">
+            <article class="estadistica">
+                <span>Total encontrados</span>
+                <strong id="totalRegistros">0</strong>
+                <small>Artículos del inventario</small>
+            </article>
+
+            <article class="estadistica">
+                <span>Página actual</span>
+                <strong id="paginaActual">1</strong>
+                <small>Posición de consulta</small>
+            </article>
+
+            <article class="estadistica">
+                <span>Total de páginas</span>
+                <strong id="totalPaginas">0</strong>
+                <small>Resultados paginados</small>
+            </article>
+        </section>
+
+        <section class="panel">
+
+            <div class="panel-encabezado">
+                <div>
+                    <h3>Catálogo de productos</h3>
+                    <p>Consulta dinámica del endpoint /api/inventario</p>
+                </div>
+
+                <span class="estado-servidor" id="estadoServidor">
+                    Conectando...
+                </span>
+            </div>
+
+            <form id="formBusqueda" class="filtros">
+
+                <div class="campo campo-busqueda">
+                    <label for="filtro">Buscar producto</label>
+                    <input
+                        type="search"
+                        id="filtro"
+                        placeholder="Ej. Laptop, Logitech, Monitores..."
+                        maxlength="100"
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="limite">Registros por página</label>
+
+                    <select id="limite">
+                        <option value="5">5 registros</option>
+                        <option value="10" selected>10 registros</option>
+                        <option value="20">20 registros</option>
+                        <option value="50">50 registros</option>
+                        <option value="100">100 registros</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="boton-primario">
+                    Buscar
+                </button>
+
+                <button type="button" id="btnLimpiar" class="boton-secundario">
+                    Limpiar
+                </button>
+
+            </form>
+
+            <div id="mensaje" class="mensaje" role="status" aria-live="polite"></div>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Producto</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaInventario">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="paginacion">
+                <span id="informacionPagina">
+                    Cargando registros...
+                </span>
+
+                <div class="paginacion-botones">
+                    <button id="btnAnterior" disabled>
+                        Anterior
+                    </button>
+
+                    <span id="numeroPagina">1</span>
+
+                    <button id="btnSiguiente" disabled>
+                        Siguiente
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="informacion">
+            <h3>Características del sistema</h3>
+
+            <div class="caracteristicas">
+                <article>
+                    <span>01</span>
+                    <h4>Servidor HTTP Nativo</h4>
+                    <p>Construido con http.server sin frameworks externos.</p>
+                </article>
+
+                <article>
+                    <span>02</span>
+                    <h4>Seguridad de archivos</h4>
+                    <p>Protección perimetral contra Path Traversal.</p>
+                </article>
+
+                <article>
+                    <span>03</span>
+                    <h4>Motor de búsqueda</h4>
+                    <p>Filtrado parcial y paginación mediante Query String.</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Ejercicio N° 02 · Desarrollo de Aplicaciones ·
+            Ingeniería de Sistemas
+        </p>
+    </footer>
+
+    <script src="/public/script.js"></script>
+
+</body>
+</html>
