@@ -1,0 +1,8 @@
+[project]
+name = "lab09-solicitudes-app"
+version = "0.1.0"
+description = "Laboratorio N. 09 - Reflex - Ejercicio 3"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "reflex==0.10.0"
+]

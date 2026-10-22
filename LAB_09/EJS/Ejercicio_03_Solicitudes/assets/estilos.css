@@ -1,0 +1,49 @@
+/* EJERCICIO 03 — Archivo visual propio: papel ocre, berenjena y coral oscuro.
+   Mobile first, sin desbordamiento horizontal. */
+:root{--papiro:#f3e6d1;--tinta:#322d4d;--arcilla:#bd4f3e;--mostaza:#f0bb5e;--lila:#d4c4ed;--fria:#efebef}
+*{box-sizing:border-box}
+body{margin:0;color:var(--tinta);background:var(--papiro);font-family:Verdana,"Trebuchet MS",sans-serif}
+.page{min-height:100vh;overflow-x:hidden;background:radial-gradient(circle at 90% 4%,#ead0d1 0,transparent 31%),var(--papiro)}
+.topbar{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;border-bottom:2px solid var(--tinta);padding:18px 5vw}
+.brand{font-weight:900;letter-spacing:.15em;font-size:14px}.small-stamp{font-size:10px;letter-spacing:.14em;font-weight:700}
+.content-shell{width:min(1210px,91vw);margin:auto;padding-bottom:35px}
+.hero{padding:42px 0 33px;position:relative}
+.hero:after{content:"✶";color:var(--arcilla);font-size:115px;position:absolute;right:5px;top:14px;opacity:.22;pointer-events:none}
+.overline{font-size:11px;font-weight:900;letter-spacing:.19em;color:var(--arcilla);margin-bottom:12px}
+.hero-title{font-family:Georgia,serif;font-size:clamp(43px,6.5vw,82px)!important;line-height:1.05!important;max-width:960px;letter-spacing:-.065em;color:var(--tinta)}
+.hero-lead{max-width:750px;color:#665a60;line-height:1.8;font-size:15px;margin-top:20px}
+.columns{display:grid;grid-template-columns:1fr;align-items:start;gap:25px}
+.form-panel,.tickets-panel{border:2px solid var(--tinta);border-radius:4px;padding:24px;background:#fff8ed;box-shadow:8px 8px 0 var(--tinta)}
+.tickets-panel{background:#e2d6ed;box-shadow:8px 8px 0 #b47d67}
+.panel-heading{font-family:Georgia,serif!important;color:var(--tinta)!important;letter-spacing:-.045em;line-height:1.1!important}
+.form-intro{font-size:13px;color:#655b5d;line-height:1.7;margin:12px 0 24px}
+.fields-layout{display:flex;flex-direction:column;gap:16px}
+.field{width:100%;min-width:0}
+.input-caption{font-size:10px;letter-spacing:.13em;font-weight:900;margin-bottom:9px;color:#51435a}
+.form-input{width:100%!important;min-height:49px!important;border:1.5px solid #5f4c62!important;background:#fffdf7!important;border-radius:2px!important;
+  padding:11px 13px!important;color:#2a233d!important;font-size:14px!important;box-shadow:none!important}
+.form-textarea{min-height:130px!important;resize:vertical}
+.form-select{width:100%!important;min-height:45px!important;border:1.5px solid #5f4c62!important;background:#fffdf7!important;
+  border-radius:2px!important;color:#2a233d!important}
+.form-input:focus-within{outline:2px solid #bb5045!important;outline-offset:1px}
+.submit-button{width:100%;background:var(--arcilla)!important;color:#fffaf0!important;min-height:52px!important;border-radius:2px!important;
+  font-weight:900!important;letter-spacing:.025em!important;cursor:pointer!important;box-shadow:4px 4px 0 var(--tinta);margin-bottom:3px}
+.submit-button:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.notice{margin-top:23px;padding:14px 15px;font-size:13px;line-height:1.6;border:1.5px solid}
+.notice-ok{color:#285143;background:#e5f2d7;border-color:#3f7156}.notice-error{color:#8a3029;background:#fff0e8;border-color:#ce6251}
+.counter-pill{display:grid;place-items:center;min-width:43px;height:43px;border-radius:50%;background:var(--tinta);color:#fff5e6;font-weight:900}
+.empty-list{text-align:center;padding:45px 14px;margin-top:24px;border:1.5px dashed #9b80ab;color:#625671;line-height:1.8}
+.empty-symbol{font-size:67px;color:var(--arcilla);line-height:1.2}.empty-heading{font-family:Georgia,serif!important;color:var(--tinta)!important;margin:8px 0 10px!important}
+.ticket-stack{display:flex;flex-direction:column;gap:14px;margin-top:24px}
+.ticket-card{padding:19px;border:1.5px solid #766181;border-left:7px solid var(--arcilla);background:#fffaf0;box-shadow:4px 4px 0 #39284122}
+.ticket-card:nth-child(3n+2){border-left-color:#668d76}.ticket-card:nth-child(3n){border-left-color:#d89b3a}
+.ticket-id{font-size:10px;letter-spacing:.15em;font-weight:900;color:#8c5d64}
+.ticket-tag{padding:6px 9px;border-radius:3px;font-size:10px;letter-spacing:.03em;font-weight:900}
+.tag-consulta{color:#3f465c;background:#dbdcec}.tag-incidencia{color:#7b332f;background:#f8d8cc}.tag-requerimiento{color:#426042;background:#dfedd8}
+.ticket-title{font-family:Georgia,serif!important;font-size:24px!important;color:var(--tinta)!important;margin-top:15px!important}
+.ticket-email{font-size:12px;color:#796475;margin-top:4px;overflow-wrap:anywhere}
+.ticket-description{font-size:13px;color:#4d4153;line-height:1.7;padding-top:15px;margin-top:12px;border-top:1px dashed #b6a6ad;white-space:pre-wrap;overflow-wrap:anywhere}
+.delete-button{margin-top:14px;background:#3c304d!important;color:#fff8ee!important;font-size:12px!important;font-weight:900!important;cursor:pointer!important}
+.footer-note{font-size:11px;letter-spacing:.045em;margin-top:55px;color:#7d6473}
+@media(min-width:920px){.columns{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:34px}.form-panel,.tickets-panel{padding:32px}.hero{padding-top:64px;padding-bottom:51px}}
+@media(max-width:450px){.small-stamp{font-size:9px}.form-panel,.tickets-panel{padding:19px;box-shadow:5px 5px 0 var(--tinta)}.hero:after{font-size:70px;top:-2px}.content-shell{width:90vw}}
