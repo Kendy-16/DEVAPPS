@@ -1,0 +1,63 @@
+/* DISEÑO DE ESTE PROYECTO: ciruela profunda + lima eléctrica + melocotón.
+   CSS responsive Mobile First. Este estilo NO se reutiliza en otros trabajos. */
+:root { color-scheme: dark; --fondo:#1b1123; --panel:#2a1931; --linea:#5a435c;
+  --lima:#dff570; --papaya:#f5dac1; --lavanda:#d6bdf5; --texto:#fbefdb; --suave:#d3bacd; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);font-family:"Trebuchet MS",Verdana,sans-serif;color:var(--texto)}
+.page{min-height:100vh;background:radial-gradient(circle at 82% 2%,#532b4a 0,transparent 35%),#1b1123;overflow-x:hidden}
+.topbar{border-bottom:1px solid #684961; background:#241529c9; padding:18px 5vw}
+.brand{letter-spacing:.15em;font-size:13px;font-weight:900;color:var(--lima)}
+.topbar-right{font-size:10px;letter-spacing:.17em;color:#d7bed3}
+.main-shell{width:min(1220px,92vw);margin:0 auto;padding:42px 0 30px}
+.hero{display:grid;grid-template-columns:1fr;gap:22px;align-items:center;padding:10px 0 48px}
+.eyebrow{font-size:11px;letter-spacing:.19em;color:var(--lima);font-weight:800;margin-bottom:10px}
+.hero-title{font-family:Georgia,serif;font-size:clamp(46px,8vw,94px)!important;line-height:1.02!important;letter-spacing:-.055em;max-width:860px;color:var(--texto);font-weight:700}
+.hero-description{font-size:16px;line-height:1.8;color:var(--suave);max-width:650px;margin-top:21px}
+.hero-sticker{width:175px;height:175px;border:2px solid var(--lima);border-radius:100%;background:#dff570;color:#241529;
+  box-shadow:10px 12px 0 #71355b;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(9deg);justify-self:start}
+.sticker-top,.sticker-bottom{font-size:9px;letter-spacing:.15em;text-align:center;font-weight:800}
+.sticker-number{font-size:82px;font-family:Georgia,serif;font-weight:bold;line-height:1.02}
+.board-section{padding:28px 0 0;border-top:1px solid var(--linea)}
+.section-title{font-family:Georgia,serif!important;color:var(--texto);letter-spacing:-.035em;font-weight:normal}
+.toolbar{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:23px}
+.filter-button{background:var(--lima)!important;color:#231526!important;font-weight:800!important;
+  border:0!important;padding:14px 22px!important;border-radius:5px!important;min-height:44px;cursor:pointer;transition:transform .2s ease}
+.filter-button:hover,.task-action:hover{transform:translateY(-2px)}
+.kanban-grid{display:grid;grid-template-columns:1fr;align-items:start;gap:17px}
+.board-column{border-radius:10px;padding:19px;min-height:350px;border:1px solid #5a455d;background:var(--panel)}
+.lane-wait{border-top:5px solid var(--lima)}.lane-doing{border-top:5px solid #f3aa8c}.lane-done{border-top:5px solid #bda4ef}
+.column-name{font-size:13px;font-weight:900;letter-spacing:.09em;color:#fbebd9}
+.column-caption{font-size:12px;color:#bba6bf;margin-top:4px}
+.column-count{min-width:37px;height:37px;border:1px solid #866b81;border-radius:100%;display:flex;align-items:center;justify-content:center;font-weight:900;color:var(--lima)}
+.task-stack{display:flex;flex-direction:column;gap:15px;margin-top:22px}
+.task-card{padding:18px 17px 14px;border-radius:8px;background:#f7dcc8;color:#2d1a2b;
+  box-shadow:7px 7px 0 #120c1869;transition:transform .2s ease}
+.task-card:hover{transform:translateY(-3px)}
+.task-id{font-size:11px;letter-spacing:.1em;font-weight:800;color:#7b5768}
+.status{font-size:9px;font-weight:900;letter-spacing:.08em;border-radius:50px;padding:6px 8px;white-space:nowrap}
+.status-wait{background:#ddf16e;color:#35431a}.status-doing{background:#ffd7b6;color:#904e21}.status-done{background:#ddc9ef;color:#573571}
+.task-title{margin-top:19px!important;font-family:Georgia,serif;color:#2b1b2c!important;font-size:21px!important;line-height:1.2!important}
+.task-description{font-size:13px;line-height:1.65;color:#6a4b5d;margin:8px 0 22px}
+.task-action{width:100%;min-height:38px!important;border:1px solid #5c3451!important;
+  background:#42263b!important;color:#fff1da!important;font-size:12px!important;font-weight:800!important;cursor:pointer!important}
+.column-empty{padding:22px 10px;border:1px dashed #7c627a;border-radius:5px;color:#d9bfd6;font-size:13px;text-align:center}
+.empty-state{background:#352039;padding:40px;text-align:center;border:1px dashed var(--lima);border-radius:10px}
+.empty-state p{margin-top:10px;color:var(--suave)}.footnote{padding:38px 0;color:#bda7bc;font-size:12px;letter-spacing:.02em}
+/* Indicadores adicionales del Ejercicio 02 */
+.metrics-section{margin-bottom:42px;padding-bottom:36px;border-bottom:1px solid var(--linea)}
+.metrics-caption{font-size:12px;color:var(--suave);max-width:230px}
+.metrics-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.metric-card{min-height:145px;border-radius:5px;padding:20px 16px;display:flex;flex-direction:column;justify-content:space-between;color:#281b28}
+.metric-total{background:#f8deca}.metric-wait{background:#e0f477}.metric-doing{background:#f4b59a}.metric-done{background:#d2c2ed}
+.metric-label{font-size:10px;letter-spacing:.1em;font-weight:900}
+.metric-number{font-family:Georgia,serif!important;line-height:1!important;font-size:53px!important;color:#2f1a32!important}
+.metric-detail{font-size:11px;color:#604c5c}
+.progress-wrap{margin-top:14px;border:1px solid var(--linea);border-radius:7px;padding:20px;background:#281a32}
+.progress-label{font-size:11px;letter-spacing:.16em;color:var(--lima);font-weight:900}
+.progress-number{font-size:31px;font-family:Georgia,serif;color:#f4e0c8;font-weight:bold}
+.progress-track{width:100%;height:13px;background:#49324c;border-radius:99px;overflow:hidden;margin:11px 0 14px}
+.progress-fill{height:100%;background:linear-gradient(90deg,#e3f778,#f6ad91);border-radius:99px;transition:width .4s ease}
+.progress-detail{font-size:12px;color:#cfb6cb;line-height:1.6}
+@media(min-width:720px){.hero{grid-template-columns:minmax(0,1fr) 190px}.hero-sticker{justify-self:end}.metrics-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(min-width:900px){.kanban-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.board-column{min-height:480px}.main-shell{padding-top:56px}}
+@media(max-width:450px){.topbar-right{display:none}.main-shell{width:92vw}.status{font-size:8px}.hero-sticker{width:140px;height:140px}.sticker-number{font-size:64px}.metric-card{min-height:135px}}
